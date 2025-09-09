@@ -2,16 +2,18 @@ package lab1;
 
 public class Multiples {
     public static void main(String[] args) {
+        System.out.println(multiples(1000, 3, 5));
+    }
 
-        // How many numbers are there that are multiples of 3 or multiples of 5?
+    public static int multiples(int n, int a, int b) {
+        // How many numbers are there under n that are multiples of a or multiples of b?
         int count = 0;
 
-        for(int i = 1; i < 1000; i++) {
-            if(i % 3 == 0 || i % 5 == 0) {
+        for(int i = 1; i < n; i++) {
+            if(i % a == 0 || i % b == 0) {
                 count++;
             }
         }
-
-        System.out.println("There are " + count + " multiples of 3 or 5 below 1000.");
+        return count;
     }
 }
