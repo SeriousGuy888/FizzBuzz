@@ -2,18 +2,22 @@ package lab1;
 
 public class Reduce {
     public static void main(String[] args) {
+        int steps = reduce(1000);
+        System.out.println(steps);
+    }
+
+    public static int reduce(int n) {
         int steps = 0;
 
-        int curr_num = 1000;
-        while (curr_num != 0) {
-            if(curr_num % 2 == 0) {
-                curr_num /= 2;
+        while (n != 0) {
+            if(n % 2 == 0) {
+                n /= 2;
             } else {
-                curr_num -= 1;
+                n -= 1;
             }
             steps++;
         }
 
-        System.out.println(steps);
+        return steps;
     }
 }
